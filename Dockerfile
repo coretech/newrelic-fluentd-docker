@@ -15,3 +15,4 @@ COPY fluent.conf /fluentd/etc/
 COPY entrypoint.sh /bin/
 
 USER fluent
+
