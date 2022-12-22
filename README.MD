@@ -40,3 +40,4 @@ docker build . -t newrelic-fluentd-docker
 * You can retrieve your New Relic Insights [insert key](https://docs.newrelic.com/docs/insights/insights-api/get-data/query-insights-event-data-api#register) from the following location:
 `https://insights.newrelic.com/accounts/<YOUR ACCOUNT ID>/manage/api_keys`
 
+### Added Loki plugin
