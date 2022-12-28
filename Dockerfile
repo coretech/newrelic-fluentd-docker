@@ -1,5 +1,5 @@
 FROM fluent/fluentd:v1.14.0-1.0
-ENV LOG_LEVEL="warn"
+ENV LOG_LEVEL="debug"
 ENV BASE_URI="https://log-api.newrelic.com/log/v1"
 
 USER root
