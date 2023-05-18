@@ -6,7 +6,7 @@ USER root
 
 RUN apk add --no-cache --update --virtual .build-deps \
         sudo build-base ruby-dev \
-        sudo upgrade zlib libssl1.1 libcrypto1.1 \
+ && apk upgrade zlib libssl1.1 libcrypto1.1 \
  && sudo fluent-gem install fluent-plugin-newrelic fluent-plugin-multi-format-parser  fluent-plugin-grafana-loki \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
@@ -15,4 +15,4 @@ RUN apk add --no-cache --update --virtual .build-deps \
 COPY fluent.conf /fluentd/etc/
 COPY entrypoint.sh /bin/
 
-USER fluent
+USER fluentd
