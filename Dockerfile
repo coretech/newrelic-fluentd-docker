@@ -6,6 +6,7 @@ USER root
 
 RUN apk add --no-cache --update --virtual .build-deps \
         sudo build-base ruby-dev \
+ && apk upgrade zlib libssl1.1 libcrypto1.1 \
  && sudo fluent-gem install fluent-plugin-newrelic fluent-plugin-multi-format-parser \
  && sudo gem sources --clear-all \
  && apk del .build-deps \
